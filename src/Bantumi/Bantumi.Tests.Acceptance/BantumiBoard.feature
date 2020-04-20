@@ -1,7 +1,7 @@
 ﻿Feature: BantumiBoard
 	In order to play bantumi 
 	As a player
-	I want to have a intercatie bantumi board
+	I want to have a interactive bantumi board
 
 @mytag
 Scenario: Play the first strike move
