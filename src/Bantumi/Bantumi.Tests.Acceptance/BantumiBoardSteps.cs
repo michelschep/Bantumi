@@ -7,53 +7,59 @@ namespace Bantumi.Tests.Acceptance
     [Binding]
     public class BantumiBoardSteps
     {
+        private readonly ScenarioContext _scenarioContext;
+
+        public BantumiBoardSteps(ScenarioContext scenarioContext)
+        {
+            _scenarioContext = scenarioContext;
+        }
+
         [Given(@"a player named (.*)")]
         public void GivenAPlayerNamed(string namePlayer)
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
 
         [Given(@"(.*) plays (.*)")]
         public void GivenFirstPlayerPlaysScondPlayer(string firstPlayer, string secondPlayer)
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
 
-                [Given(@"an initial bantumi board")]
+        [Given(@"an initial bantumi board")]
         public void GivenAnInitialBantumiBoard()
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
-        
+
         [When(@"(.*) plays field (.*)")]
         public void WhenPlayerPlaysField(string playerName, string field)
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
-        
+
         [Then(@"the board should be")]
         public void ThenTheBoardShouldBe(Table table)
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
-        
+
         [Then(@"score (.*)-(.*) should be (.*)-(.*)")]
         public void ThenScoreMichel_GealeShouldBe(string firstPlayer, string secondPlayer, int scoreFirstPlayer, int scoreSecondPlayer)
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
-        
+
         [Then(@"it is (.*)'s turn")]
         public void ThenItIsPlayersTurn(string playerName)
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
-        
+
         [Then(@"it is Michel's turn")]
         public void ThenItIsMichelSTurn()
         {
-            ScenarioContext.Current.Pending();
+            _scenarioContext.Pending();
         }
-
     }
 }
