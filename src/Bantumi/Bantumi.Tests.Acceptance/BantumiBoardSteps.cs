@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using TechTalk.SpecFlow;
 
 namespace Bantumi.Tests.Acceptance
@@ -24,8 +25,8 @@ namespace Bantumi.Tests.Acceptance
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"Michel plays field (.*)")]
-        public void WhenMichelPlaysField(int p0)
+        [When(@"(.*) plays field (.*)")]
+        public void WhenPlayerPlaysField(string playerName, string field)
         {
             ScenarioContext.Current.Pending();
         }
@@ -36,14 +37,14 @@ namespace Bantumi.Tests.Acceptance
             ScenarioContext.Current.Pending();
         }
         
-        [Then(@"score Michel-Geale should be (.*)")]
-        public void ThenScoreMichel_GealeShouldBe(string p0)
+        [Then(@"score (.*)-(.*) should be (.*)-(.*)")]
+        public void ThenScoreMichel_GealeShouldBe(string firstPlayer, string secondPlayer, int scoreFirstPlayer, int scoreSecondPlayer)
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Then(@"it is Geale's turn")]
-        public void ThenItIsGealeSTurn()
+        [Then(@"it is (.*)'s turn")]
+        public void ThenItIsPlayersTurn(string playerName)
         {
             ScenarioContext.Current.Pending();
         }
